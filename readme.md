@@ -3,11 +3,11 @@
     - [Inline Style](#inline-styles)
     - [Internal CSS](#internal-css)
     - [External CSS](#external-css)
-1. [CSS In a Nutshell]
+1. [CSS In a Nutshell](#css-in-a-nutshell)
     - [Box Model](#box-model)
     - [Flex](#flex)
     - [Grid](#grid)
-1. [CSS Preprocessors]
+1. [CSS Preprocessors](#css-preprocessors)
     - [SASS](#sass)
 1. [References](#references)
 
