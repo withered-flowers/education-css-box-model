@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+  <body>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./public/index.css" />
-    <style></style>
+    <!-- Ini adalah external style -->
+    <!-- Perhatikan peletakannya sebelum internal style -->
+    <link rel="stylesheet" href="src/index.css"></link
+    
+    <!-- Ini adalah internal style -->
+    <style>
+      .internal-style-h1 {
+        color: blueviolet;
+      }
+    </style>
+    
   </head>
   <body>
-    <div class="my-element">A</div>
-    <div class="my-element">B</div>
+    <!-- Ada style di dalam tag h1, inilah inline style -->
+    <h1 style="color: #666">Ini adalah inline style</h1>
+    <!-- Perhatikan di sini kita menggunakan class yang ada pada style -->
+    <!-- yang didefinisikan pada tag style di atas -->
+    <h1 class="internal-style-h1">Ini adalah internal style</h1>
+    <!-- Perhatikan di sini kita menggunakan class yang ada pada -->
+    <!-- file: public/index.css -->
+    <h1 class="external-style-h1">Ini adalah external style</h1> 
   </body>
 </html>
