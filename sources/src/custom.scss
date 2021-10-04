@@ -1,0 +1,27 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$base-color: #036;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+nav {
+  .links {
+    display: flex;
+  }
+  li {
+    list-style: none;
+    display: inline;
+  }
+}
+
+
+@for $i from 1 through 12 {
+  col-#{$i} {
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

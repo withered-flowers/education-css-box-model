@@ -8,3 +8,40 @@ p {
   padding: 20px;
   border: 1px solid;
 }
+
+.red {
+  background-color: #ffcdd2;
+}
+
+.purple {
+  background-color: #e1bee7;
+}
+
+.blue {
+  background-color: #bbdefb;
+}
+
+.teal {
+  background-color: #80cbc4;
+}
+
+.amber {
+  background-color: #ffecb3;
+}
+
+.items {
+  padding: 16px;
+  font-size: 3em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* Ganti menjadi 99vh atau 100vh tergantung browser */
+  height: 99vh;
+  /* Grey 300 */
+  background-color: #e0e0e0;
+}
