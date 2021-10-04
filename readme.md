@@ -447,7 +447,7 @@ Property `justify-content` ini akan mengatur peletakkan items berdasarkan
 Pada direction `row` brarti sumbu x (horizontal)
 Pada direction `column` berarti sumbu y (vertical)
 
-Untuk property dari `justify-content` ini dapat dilihat di sini:
+Untuk property dari `justify-content` ini dapat dilihat di sini:  
 ![image04](assets/image04.png)
 
 Langsung saja kita cobakan pada file css yang dimiliki untuk mencoba mengganti  
@@ -472,7 +472,7 @@ peletakkan items yang ada terhadap `cross-axis` dari flex tersebut
 Pada direction `row` berarti sumbu y (vertical)
 Pada direction `column` berarti sumbu x (horizontal)
 
-Untuk property dari `align-items` ini dapat dilihat di sini:
+Untuk property dari `align-items` ini dapat dilihat di sini:  
 ![image05](assets/image05.png)
 
 Langsung saja kita cobakan pada file css yang dimiliki untuk mencoba mengganti  
