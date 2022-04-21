@@ -831,7 +831,7 @@ Sekarang kita akan mencoba mengimplementasikan grid dengan bootstrap !
 ```
 
 Untuk mempelajari lebih lanjut tentang pure CSS tentang grid, bisa mencoba  
-untuk membuka tautan https://gridgarden.com yah !
+untuk membuka tautan https://cssgridgarden.com yah !
 
 Masuk ke bagian terakhir dalam pembelajaran hari ini, cukup panjang yah !
 
