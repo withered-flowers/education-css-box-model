@@ -15,14 +15,9 @@
 1. [References](#references)
 
 ### What is CSS
-CSS, merupakan kependekan dari *Cascading Style Sheets* adalah suatu "bahasa"  
-yang mendeskripsikan bagaimana Elemen dari HTML akan ditampilkan pada layar,  
-kertas, ataupun media lainnya.
+CSS, merupakan kependekan dari *Cascading Style Sheets* adalah suatu "bahasa" yang mendeskripsikan bagaimana Elemen dari HTML akan ditampilkan pada layar kertas, ataupun media lainnya.
 
-CSS ini tanpa kita sadari, kita sering mengkonsumsinya dan apabila kita  
-sebagai developer *mengerti* menggunakannya, akan mempermudah hidup, karena  
-dapat mengontrol tampilan layout dari berbagai ukuran situs web dalam satu  
-kali pembuatan css.
+CSS ini tanpa kita sadari, kita sering mengkonsumsinya dan apabila kita  sebagai developer *mengerti* menggunakannya, akan mempermudah hidup, karena  dapat mengontrol tampilan layout dari berbagai ukuran situs web dalam satu kali pembuatan css.
 
 Mari sekarang kita mencoba untuk melihat cara penggunaan cssnya
 
@@ -33,8 +28,7 @@ Cara untuk menggunakan css ini sebenarnya terbagi menjadi beberapa cara:
 - External style
 
 #### Inline Style
-Inline style, adalah dimana kita menggunakan / mendefinisikan css di dalam  
-tag HTML itu sendiri
+Inline style, adalah dimana kita menggunakan / mendefinisikan css di dalam tag HTML itu sendiri
 ```html
 <body>
   <!-- Ada style di dalam tag h1, inilah inline style -->
@@ -49,8 +43,7 @@ Ini disebut dengan `inline style`.
 Selanjutnya kita akan melihat `internal style`
 
 #### Internal Style
-Internal style, adalah dimana kita mendefinisikan style di dalam file html   
-itu sendiri
+Internal style, adalah dimana kita mendefinisikan style di dalam file html itu sendiri
 
 ```html
 <head>
@@ -68,16 +61,14 @@ itu sendiri
 </body>
 ```
 
-Terlihat pada kode di atas, kita menggunakan tag "style" di dalam head,  
-kemudian kita mendefinikan style di dalam tag style itu sendiri.
+Terlihat pada kode di atas, kita menggunakan tag "style" di dalam head, kemudian kita mendefinikan style di dalam tag style itu sendiri.
 
 Ini disebut dengan `internal style`
 
 Selanjut kita akan melihat `external style`
 
 #### External Style
-External style, adalah dimana kita mendefinisikan style di luar file html itu  
-sendiri.
+External style, adalah dimana kita mendefinisikan style di luar file html itu sendiri.
 
 ```html
 <!-- File: index.html -->
@@ -106,27 +97,21 @@ sendiri.
 }
 ```
 
-Terlihat bahwa pada kode di atas, kita menggunakan sebuah file css terpisah  
-dari file html yang ada. 
+Terlihat bahwa pada kode di atas, kita menggunakan sebuah file css terpisah dari file html yang ada. 
 
 Ini disebut dengan `external style`
 
-Selanjutnya setelah mengenal tentang cara penulisan CSS kita akan belajar  
-mengenai bagaimana melakukan layouting dengan CSS
+Selanjutnya setelah mengenal tentang cara penulisan CSS kita akan belajar mengenai bagaimana melakukan layouting dengan CSS
 
 ### CSS Layouting in a Nutshell
-Pada bagian ini kita akan mempelajari bagaimana cara melakukan layoting dengan  
-CSS menggunakan `flex` dan `grid`.
+Pada bagian ini kita akan mempelajari bagaimana cara melakukan layoting dengan CSS menggunakan `flex` dan `grid`.
 
-Namun sebelum mempelajari itu, ada sedikit aturan css yang harus diketahui  
-terlebih dahulu yah, khususnya mengenai `box model` pada CSS.
+Namun sebelum mempelajari itu, ada sedikit aturan css yang harus diketahui terlebih dahulu yah, khususnya mengenai `box model` pada CSS.
 
 #### Box Model
-Dalam CSS, sebenarnya apapun bentuknya, SELURUH hal / elemen yang dimunculkan  
-oleh CSS bentuknya adalah sebuah `kotak` atau disebut dengan `box model`.
+Dalam CSS, sebenarnya apapun bentuknya, SELURUH hal / elemen yang dimunculkan  oleh CSS bentuknya adalah sebuah `kotak` atau disebut dengan `box model`.
 
-Cara kita mendeskripsikan ini adalah fondasi utama dari pembelajaran CSS itu  
-sendiri !
+Cara kita mendeskripsikan ini adalah fondasi utama dari pembelajaran CSS itu sendiri !
 
 Misalkan kita memiliki sebuah tag html sebagai berikut
 
@@ -144,50 +129,32 @@ p {
 }
 ```
 
-Maka, apabila kode ini dijalankan dan dilihat, konten (tulisannya) akan bablas  
-ke bawah, mengapa demikian? karena pada tahap ini kita belum mengerti tentang  
-`box model`, bagaimana `box model` ini dipengaruhi oleh aspek lainnya dalam  
-CSS, dan bagaimana dalam mengontrol `box model` ini bisa membuat kita membuat  
-CSS yang lebih bisa dipahami !
+Maka, apabila kode ini dijalankan dan dilihat, konten (tulisannya) akan bablas ke bawah, mengapa demikian? karena pada tahap ini kita belum mengerti tentang `box model`, bagaimana `box model` ini dipengaruhi oleh aspek lainnya dalam CSS, dan bagaimana dalam mengontrol `box model` ini bisa membuat kita membuat CSS yang lebih bisa dipahami !
 
-Lalu bagaimanakah cara kita menyelesaikan ini supaya border yang dibuat sesuai  
-dengan konten yang ada saja?
+Lalu bagaimanakah cara kita menyelesaikan ini supaya border yang dibuat sesuai dengan konten yang ada saja?
 ```
 hint: gunakan width dan height untuk set content yang flexible !
 ```
 
-Pada pembelajaran ini kita tidak mendiskusikan bagaimana cara kita  
-menyelesaikan solusi di atas, hanya saja, kita akan mempelajari area dalam  
-box model ini ada apa saja.
+Pada pembelajaran ini kita tidak mendiskusikan bagaimana cara kita menyelesaikan solusi di atas, hanya saja, kita akan mempelajari area dalam box model ini ada apa saja.
 
 ![image01](assets/image01.png)
 
-Semuanya dimulai dari `content box` yang ada di sini, dimana merupakan area  
-dimana konten (isi dari tag html) itu berada, dan `content box` ini, SANGAT  
-bisa mengontrol ukuran dari tag html orang tua dari tag html ini, jadi  
-`content box` ini merupakan area dimana ukurannya PALING variatif.
+Semuanya dimulai dari `content box` yang ada di sini, dimana merupakan area dimana konten (isi dari tag html) itu berada, dan `content box` ini, SANGAT bisa mengontrol ukuran dari tag html orang tua dari tag html ini, jadi `content box` ini merupakan area dimana ukurannya PALING variatif.
 
-`padding box` mengelilingi `content box` dan ini adalah ruang dimana property  
-`padding` diterapkan. Karena `padding` ini adalam di dalam kotak, latar  
-belakang dari kotak akan terlihat di dalam ruang yang dibuat ini.
+`padding box` mengelilingi `content box` dan ini adalah ruang dimana property `padding` diterapkan. Karena `padding` ini adalam di dalam kotak, latar belakang dari kotak akan terlihat di dalam ruang yang dibuat ini.
 
-`border box` akan mengelilingi `padding box` dan ruang ini akan tergantung  
-dari nilai `border` yang dibuat. umumnya digunakan untuk memvisualisikan  
-bingkai di dalam sebuah element.
+`border box` akan mengelilingi `padding box` dan ruang ini akan tergantung dari nilai `border` yang dibuat. umumnya digunakan untuk memvisualisikan bingkai di dalam sebuah element.
 
-area terakhir `margin box` adalah ruang keliling di seluruh kotak yang ada,  
-didefinisikan berdasarkan aturan `margin` yang ada di kotak. Property css  
-seperti `outline` ataupun `box-shadow` akan memengaruhi `margin box` ini.
+area terakhir `margin box` adalah ruang keliling di seluruh kotak yang ada didefinisikan berdasarkan aturan `margin` yang ada di kotak. Property css seperti `outline` ataupun `box-shadow` akan memengaruhi `margin box` ini.
 
 Sepertinya ribet yah untuk memahami `box model` ini?
 
-Jadi mari kita coba pelajari ini lebih lanjut dengan analogi berdasarkan  
-gambar berikut:
+Jadi mari kita coba pelajari ini lebih lanjut dengan analogi berdasarkan gambar berikut:
 
 ![image02](assets/image02.png)
 
-Berdasarkan gambar di atas, kita memiliki 3 foto berbingkai, yang di-*templok*  
-pada tembok, dengan jarak satu sama lain.
+Berdasarkan gambar di atas, kita memiliki 3 foto berbingkai, yang di-*templok* pada tembok, dengan jarak satu sama lain.
 
 Pada gambar ini terlihat bahwa:
 - `content box` merupakan gambar seninya
@@ -196,39 +163,26 @@ Pada gambar ini terlihat bahwa:
 - `margin box` merupakan ruang jarak antar bingkai satu dengan yang lainnya
 - `shadow` yang memiliki ruang yang sama dengan si `margin box` yang ada
 
-Nah setelah kita mengetahui `box model` ini, barulah kita masuk ke materi  
-utama kita, yaitu Layouting, dengan Flex dan Grid !
+Nah setelah kita mengetahui `box model` ini, barulah kita masuk ke materi utama kita, yaitu Layouting, dengan Flex dan Grid !
 
 #### Flex
-`Flexbox Layout` atau dikenal dengan Flex, merupakan mekanisme layout yang  
-didesain untuk mengelompokkan sekumpulan barang di dalam wadah dengan bentuk  
-satu dimensi yang sama, misalnya semua di sumbu yang sama (horizontal atau  
-vertical), TANPA mengetahui ukuran yang ada a.k.a dinamis (sehingga dinamakan  
-Flex / flexbible).
+`Flexbox Layout` atau dikenal dengan Flex, merupakan mekanisme layout yang didesain untuk mengelompokkan sekumpulan barang di dalam wadah dengan bentuk satu dimensi yang sama, misalnya semua di sumbu yang sama (horizontal atau vertical), TANPA mengetahui ukuran yang ada a.k.a dinamis (sehingga dinamakan Flex / flexbible).
 
-Di dalam `Flexbox` ini dikenal beberapa istilah yang perlu dimengerti terlebih  
-dahulu:
+Di dalam `Flexbox` ini dikenal beberapa istilah yang perlu dimengerti terlebih dahulu:
 - Container
 - Items
 
-Container: sebuah "wadah" atau "tempat" yang digunakan untuk menampung "items"
-Items: adalah "elemen" yang berisi konten yang diinginkan
+Container: sebuah "wadah" atau "tempat" yang digunakan untuk menampung "items" Items: adalah "elemen" yang berisi konten yang diinginkan
 
-Analoginya di sini, Container akan bertindak sebagai `parent` yang akan  
-`mengayomi` anakannya `children` yaitu Items.
+Analoginya di sini, Container akan bertindak sebagai `parent` yang akan `mengayomi` anakannya `children` yaitu Items.
 
-Pada pembelajaran ini kita akan menggunakan dokumentasi yang telah disediakan  
-pada tautan [ini](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+Pada pembelajaran ini kita akan menggunakan dokumentasi yang telah disediakan pada tautan [ini](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-Dalam tautan di atas, pada bagian `Flexbox Properties` kita akan mencoba untuk  
-membaca dan mengimplementasikan Flexbox dan css attributenya yang ada pada   
-bagian parent (yang berwarna ungu) dan children (yang berwarna kuning).
+Dalam tautan di atas, pada bagian `Flexbox Properties` kita akan mencoba untuk membaca dan mengimplementasikan Flexbox dan css attributenya yang ada pada  bagian parent (yang berwarna ungu) dan children (yang berwarna kuning).
 
-Disclaimer bahwa sebenarnya nama classnya bukan menjadi `parent-xxx` ataupun  
-`child-xxx`, ini hanya sekedar analogi nya saja.
+Disclaimer bahwa sebenarnya nama classnya bukan menjadi `parent-xxx` ataupun `child-xxx`, ini hanya sekedar analogi nya saja.
 
-Pertama-tama kita akan masuk ke bagian yang `Flex direction`, dimana ini  
-adalah cara peletakkan items di dalam container itu bagaimana.
+Pertama-tama kita akan masuk ke bagian yang `Flex direction`, dimana ini adalah cara peletakkan items di dalam container itu bagaimana.
 
 Ada 4 direction yang ada di dalam sini:
 - row -> items akan diurutkan secara left to right
@@ -236,11 +190,9 @@ Ada 4 direction yang ada di dalam sini:
 - column - items akan diurutkan dari atas ke bawah
 - column (reverse) - items akan diurutkan dari bawah ke atas
 
-Nah daripada kita bingung ini maksudnya apa, sebaiknya kita langsung mencoba  
-untuk melihatnya saja ini bagaimana membuatnya yah !
+Nah daripada kita bingung ini maksudnya apa, sebaiknya kita langsung mencoba untuk melihatnya saja ini bagaimana membuatnya yah !
 
-Mari buat sebuah file `index-flex.html` dimana kita akan  
-mendefinisikan sebuah "container" dan beberapa "items" di sini yah
+Mari buat sebuah file `index-flex.html` dimana kita akan mendefinisikan sebuah "container" dan beberapa "items" di sini yah
 
 ```html
 <!DOCTYPE html>
@@ -267,9 +219,7 @@ mendefinisikan sebuah "container" dan beberapa "items" di sini yah
 </html>
 ```
 
-Nah untuk mempercantik, sekaligus bisa melihat batasan antara jarak dan kotak  
-yang ada, maka kita akan menggunakan warna yang disediakan dari  
-`Material Color Tool` pada tautan [ini](https://material.io/resources/color/)
+Nah untuk mempercantik, sekaligus bisa melihat batasan antara jarak dan kotak yang ada, maka kita akan menggunakan warna yang disediakan dari `Material Color Tool` pada tautan [ini](https://material.io/resources/color/)
 
 Misalnya color yang akan kita gunakan untuk 5 items di atas adalah:
 - red-100
@@ -294,8 +244,7 @@ Maka selanjutnya kita akan mendeskrsipsikan warna tersebut di dalam class
 <!-- End of Flexbox section -->
 ```
 
-Kemudian kita akan menambahkan warna tersebut di dalam file `src/index.css`  
-yang sudah dibuat
+Kemudian kita akan menambahkan warna tersebut di dalam file `src/index.css` yang sudah dibuat
 
 ```css
 .red {
@@ -328,12 +277,9 @@ Sebagai penambahan visual kita akan menambahkan sedikit css untuk class items
 }
 ```
 
-Terlihat dari sini bahwa *by default*, ukuran div itu lebarnya adalah 100%  
-ukuran layar per "items" yang ada.
+Terlihat dari sini bahwa *by default*, ukuran div itu lebarnya adalah 100% ukuran layar per "items" yang ada.
 
-Sekarang kita akan coba mulai menggunakan flex, dengan mendeskripsikannya pada  
-parent yang mendiami items, yaitu class `container`, yaitu dengan menambahkan  
-property `dislay: flex` untuk class `container`.
+Sekarang kita akan coba mulai menggunakan flex, dengan mendeskripsikannya pada parent yang mendiami items, yaitu class `container`, yaitu dengan menambahkan property `dislay: flex` untuk class `container`.
 
 ```css
 .container {
@@ -347,8 +293,7 @@ By default untuk flex sudah property default disiapkan cukup banyak:
 - justify-content adalah `flex-start`
 - align-items adalah `stretch`
 
-Sehingga apabila ingin dituliskan kembali dengan hasil yang sama, maka css  
-yang harus ditulis adalah
+Sehingga apabila ingin dituliskan kembali dengan hasil yang sama, maka css yang harus ditulis adalah
 
 ```css
 .container {
@@ -360,15 +305,11 @@ yang harus ditulis adalah
 }
 ```
 
-Sekarang kita akan mencoba masuk terlebih dahulu untuk property  
-`flex-direction`.
+Sekarang kita akan mencoba masuk terlebih dahulu untuk property `flex-direction`.
 
-Coba kita menggantinya menjadi `row-reverse` / `column` / `column-reverse` dan  
-kita akan melihat hasilnya.
+Coba kita menggantinya menjadi `row-reverse` / `column` / `column-reverse` dan kita akan melihat hasilnya.
 
-Namun by default ini pada saat direverse, posisinya tidak akan ada di bawah.  
-supaya nanti posisinya ada di bawah, maka nanti kita harus menambahkan  
-property `height`nya terlebih dahulu
+Namun by default ini pada saat direverse, posisinya tidak akan ada di bawah. supaya nanti posisinya ada di bawah, maka nanti kita harus menambahkan property `height`nya terlebih dahulu
 
 ```css
 .container {
@@ -382,8 +323,7 @@ property `height`nya terlebih dahulu
 }
 ```
 
-Supaya kita bisa melihat batasan dari container ini, kita akan menambahkan  
-property background-colornya juga yah
+Supaya kita bisa melihat batasan dari container ini, kita akan menambahkan property background-colornya juga yah
 
 ```css
 .container {
@@ -399,17 +339,13 @@ property background-colornya juga yah
 }
 ```
 
-Pada saat kita mengganti-ganti flex-direction ini, sebenarnya terlihat bahwa  
-items ini ukurannya akan mengikuti container yang ada, hal ini dikarenakan  
-align-items yang kita gunakan adalah `stretch` by defaultnya, padahal kan  
-seharusnya itemsnya berdiri sendiri ukurannya? 
+Pada saat kita mengganti-ganti flex-direction ini, sebenarnya terlihat bahwa items ini ukurannya akan mengikuti container yang ada, hal ini dikarenakan align-items yang kita gunakan adalah `stretch` by defaultnya, padahal kan seharusnya itemsnya berdiri sendiri ukurannya? 
 
 Bagaimana cara kita mengakalinya?
 
 Nanti akan kita pelajari lebih lanjut maksudnya apa yah !
 
-Sekaran kita akan kembalikan lagi flex-directionnya menjadi row lagi, tanpa  
-`height` terlebih dahulu yah !
+Sekarang kita akan kembalikan lagi flex-directionnya menjadi row lagi, tanpa `height` terlebih dahulu yah !
 
 ```css
 .container {
@@ -425,33 +361,28 @@ Sekaran kita akan kembalikan lagi flex-directionnya menjadi row lagi, tanpa
 }
 ```
 
-Nah sebelum kita lanjut lebih dalam, ada sedikit lagi terminologi yang harus  
-diketahui yah, yaitu di sini akan ada `main-axis` dan `cross-axis`.
+Nah sebelum kita lanjut lebih dalam, ada sedikit lagi terminologi yang harus diketahui yah, yaitu di sini akan ada `main-axis` dan `cross-axis`.
 
 ![image03](assets/image03.png)
 
-Pada flex-direction row, `main-axis` atau sumbu utamanya dari row ini adalah  
-sumbu x (horizontal) dan `cross-axis` atau sumbu silangnya adalah sumbu y  
-(vertical).
+Pada flex-direction row, `main-axis` atau sumbu utamanya dari row ini adalah sumbu x (horizontal) dan `cross-axis` atau sumbu silangnya adalah sumbu y (vertical).
 
-Sedangkan pada flex-direction column, adalah kebalikannya,  
-`main-axis` sumbu y, dan `cross-axis` adalah sumbu x.
+Sedangkan pada flex-direction column, adalah kebalikannya, `main-axis` sumbu y, dan `cross-axis` adalah sumbu x.
 
 Barulah sekarang kita masuk untuk manipulasi peletakkan items.
 
 Misalnya dengan menggunakan property `justify-content`.
 
-Property `justify-content` ini akan mengatur peletakkan items berdasarkan  
-`main-axis` yang ada (perataan items sepanjang `main-axis`).
+Property `justify-content` ini akan mengatur peletakkan items berdasarkan `main-axis` yang ada (perataan items sepanjang `main-axis`).
 
 Pada direction `row` brarti sumbu x (horizontal)
+
 Pada direction `column` berarti sumbu y (vertical)
 
 Untuk property dari `justify-content` ini dapat dilihat di sini:  
 ![image04](assets/image04.png)
 
-Langsung saja kita cobakan pada file css yang dimiliki untuk mencoba mengganti  
-property `justifty-content` tadi yah !
+Langsung saja kita cobakan pada file css yang dimiliki untuk mencoba mengganti property `justifty-content` tadi yah !
 
 Yang perlu diperhatikan adalah pada value `space-xxx`:
 - `space-between` artinya spacing (jarak) antar item akan dibuat sama "jauh"  
@@ -464,19 +395,19 @@ Yang perlu diperhatikan adalah pada value `space-xxx`:
   terjauh (pada row artinya terkanan)  
   ![image07](assets/image07.png)
 
-(Apabila pada flex-direction `column` artinya yang dilihat adalah terhadap  sumbu y vertical yah !)
+(Apabila pada flex-direction `column` artinya yang dilihat adalah terhadapsumbu y vertical yah !)
 
-Masuk ke property selanjutnya pada flex, yaitu `align-items`, dimana mengatur  
-peletakkan items yang ada terhadap `cross-axis` dari flex tersebut
+Masuk ke property selanjutnya pada flex, yaitu `align-items`, dimana mengatur peletakkan items yang ada terhadap `cross-axis` dari flex tersebut
 
 Pada direction `row` berarti sumbu y (vertical)
+
 Pada direction `column` berarti sumbu x (horizontal)
 
-Untuk property dari `align-items` ini dapat dilihat di sini:  
+Untuk property dari `align-items` ini dapat dilihat di sini: 
+
 ![image05](assets/image05.png)
 
-Langsung saja kita cobakan pada file css yang dimiliki untuk mencoba mengganti  
-property `align-items` ini yah !
+Langsung saja kita cobakan pada file css yang dimiliki untuk mencoba mengganti property `align-items` ini yah !
 
 Sebelumnya kita akan menyalakan kembali property heightnya pada css yah !
 ```css
@@ -493,11 +424,9 @@ Sebelumnya kita akan menyalakan kembali property heightnya pada css yah !
 }
 ```
 
-Mari kita coba untuk mengganti-ganti kannya ke `flex-start` / `flex-end` /  
-`center`
+Mari kita coba untuk mengganti-ganti kannya ke `flex-start` / `flex-end` / `center`
 
-Nah sekarang, bagaimanakah caranya untuk meletakkan items ini semuanya pada  
-kanan bawah?
+Nah sekarang, bagaimanakah caranya untuk meletakkan items ini semuanya pada kanan bawah?
 
 ```css 
 .container {
@@ -513,8 +442,7 @@ kanan bawah?
 }
 ```
 
-Oke, sekarang kita akan mengembalikan valuenya semuanya menjadi `flex-start`  
-yah !
+Oke, sekarang kita akan mengembalikan valuenya semuanya menjadi `flex-start` yah !
 
 ```css
 .container {
@@ -530,8 +458,7 @@ yah !
 }
 ```
 
-Sekarang kita punya permasalahan baru, apabila kita memiliki elemen items yang  
-cukup banyak pada html kita, misalnya seperti berikut
+Sekarang kita punya permasalahan baru, apabila kita memiliki elemen items yang cukup banyak pada html kita, misalnya seperti berikut
 
 ```html
 <!-- Flexbox section -->
@@ -564,11 +491,9 @@ cukup banyak pada html kita, misalnya seperti berikut
 </div>
 <!-- End of Flexbox section -->
 ```
-Sekarang ini kita melihat bahwa ternyata, items ini `ngeyel` melewati  
-containernya, menjadi bablas searah `main axis` yang ada.
+Sekarang ini kita melihat bahwa ternyata, items ini `ngeyel` melewati containernya, menjadi bablas searah `main axis` yang ada.
 
-Bagaimanakah cara kita untuk membuat nya `menurut` dengan container, sehingga  
-ketika sudah bablas, akan mengikuti arah container yang ada?
+Bagaimanakah cara kita untuk membuat nya `menurut` dengan container, sehingga ketika sudah bablas, akan mengikuti arah container yang ada?
 
 (Misalnya, pada direction row, bila bablas, akan turun ke bawah?)
 
@@ -620,17 +545,13 @@ Maka kita bisa menambahkan `order` di dalam flex ini
 <!-- End of Flexbox section -->
 ```
 
-Selain itu untuk pembagian spacingnya per item di dalam `main-axis` kita juga  
-bisa menggunakan `flex-grow`, misalnya pada item tertentu, ingin menempati slot
-yang lebih banyak drpd item lainnya, maka bisa menggunakan `flex-grow`.
+Selain itu untuk pembagian spacingnya per item di dalam `main-axis` kita juga bisa menggunakan `flex-grow`, misalnya pada item tertentu, ingin menempati slot yang lebih banyak drpd item lainnya, maka bisa menggunakan `flex-grow`.
 
-Kemudian bisa juga apabila ada items yang `ingin melawan kodrat` dari sisi  
-peletakkannya, bisa menggunakan `align-self`
+Kemudian bisa juga apabila ada items yang `ingin melawan kodrat` dari sisi peletakkannya, bisa menggunakan `align-self`
 
 dan ada banyak property lainnya lagi, bisa dicoba sendiri yah !
 
-Dan ada sedikit juga nih games yang bisa membantu kita memperdalam Flex ini,  
-yaitu [Flexbox Froggy](Https://flexboxfroggy.com)
+Dan ada sedikit juga nih games yang bisa membantu kita memperdalam Flex ini, yaitu [Flexbox Froggy](Https://flexboxfroggy.com)
 
 #### Navbar with Flex
 Misalnya sekarang kita ingin membuat navbar dengan flex
@@ -740,14 +661,10 @@ Bagaimanakah cara kita membuatnya?
 
 (Di sini kita analisis saja yah, tidak mencontohkan pembuatannya)
 
-Oke sudah sudah, mari selesai membahas flexnya, sekarang kita akan masuk ke  
-bagian layouting yang satunya lagi yang populer selain flex, yaitu yang  
-bernama `Grid` atau `Grid System`
+Oke sudah sudah, mari selesai membahas flexnya, sekarang kita akan masuk ke bagian layouting yang satunya lagi yang populer selain flex, yaitu yang bernama `Grid` atau `Grid System`
 
 #### Grid
-`Grid System` adalah sebuah `Flex` tingkat lanjut, yang digunakan oleh   
-beberapa perusahaan dan menjadi fondasi framework untuk pengaturan peletakkan  
-elemen dalam website.
+`Grid System` adalah sebuah `Flex` tingkat lanjut, yang digunakan oleh  beberapa perusahaan dan menjadi fondasi framework untuk pengaturan peletakkan elemen dalam website.
 
 Komponen utamanya adalah `container`, `row`, dan `column`
 
@@ -755,35 +672,24 @@ Nah loh, kok mirip dengan `tabel`?
 
 Nah inilah cikal bakalnya !
 
-Di sini kita akan berusaha untuk mengimplementasikan Grid system ini dengan  
-menggunakan suatu UI Framework yang bernama `bootstrap` yah.
+Di sini kita akan berusaha untuk mengimplementasikan Grid system ini dengan menggunakan suatu UI Framework yang bernama `bootstrap` yah.
 
-Sebenarnya ada banyak alternatifnya, seperti materializecss, semanticui, dll,  
-Namun yang digunakan dalam pembelajaran ini adalah bootstrap yah !
+Sebenarnya ada banyak alternatifnya, seperti materializecss, semanticui, dll, Namun yang digunakan dalam pembelajaran ini adalah bootstrap yah !
 
-Mari kita coba membuka tautan https://getbootstrap.com/docs/5.1/layout/grid/
+Mari kita coba membuka tautan https://getbootstrap.com/docs/5.2/layout/css-grid/#how-it-works
 
-Di sini diketahui bahwa dalam `grid system` yang digunakan oleh bootstrap  
-(dan mayoritas ui framework lainnya) menggunakan sistem 12 kolom, namun ada  
-juga yang menggunakan jumlah kolom yang berbeda.
+Di sini diketahui bahwa dalam `grid system` yang digunakan oleh bootstrap (dan mayoritas ui framework lainnya) menggunakan sistem 12 kolom, namun ada juga yang menggunakan jumlah kolom yang berbeda.
 
-FYI container yang digunakan di dalam bootstrap ini, sedikit berbeda dengan  
-yang dibuat di atas, karena sudah ada css tambahan yang diselipkan per class  
-yang ada di dalam bootstrap ini (bisa dilihat dengan inspect element).
+FYI container yang digunakan di dalam bootstrap ini, sedikit berbeda dengan yang dibuat di atas, karena sudah ada css tambahan yang diselipkan per class yang ada di dalam bootstrap ini (bisa dilihat dengan inspect element).
 
-Pada bootstrap ini, untuk mengadopsi grid system ini, menggunakan class
-`container` yang di dalamnya ada `row` yang di dalamnya `column`.
+Pada bootstrap ini, untuk mengadopsi grid system ini, menggunakan class `container` yang di dalamnya ada `row` yang di dalamnya `column`.
 ```
 div.container > div.row > div.column
 ```
 
-Dan pada bootstrap ini, berdasarkan layar resolusi tertentu, sudah dibuat  
-`breakpoints`nya, yaitu, untuk layar tertentu, akan mengadopsi cara penampilan  
-tertentu, yang kemungkinan, kalau dibuat sendiri cssnya, akan menghadapi   
-effort yang lebih untuk mencapai tampilan yang `responsif`.
+Dan pada bootstrap ini, berdasarkan layar resolusi tertentu, sudah dibuat `breakpoints`nya, yaitu, untuk layar tertentu, akan mengadopsi cara penampilan tertentu, yang kemungkinan, kalau dibuat sendiri cssnya, akan menghadapi  effort yang lebih untuk mencapai tampilan yang `responsif`.
 
-Misal: pada layar komputer, dibagi jadi 3 bagian, kalau di hp, akan ada 1  
-layar saja.
+Misal: pada layar komputer, dibagi jadi 3 bagian, kalau di hp, akan ada 1 layar saja.
 
 Tiap framework = `breakpoints` berbeda
 
@@ -830,8 +736,7 @@ Sekarang kita akan mencoba mengimplementasikan grid dengan bootstrap !
 </html>
 ```
 
-Untuk mempelajari lebih lanjut tentang pure CSS tentang grid, bisa mencoba  
-untuk membuka tautan https://cssgridgarden.com yah !
+Untuk mempelajari lebih lanjut tentang pure CSS tentang grid, bisa mencoba untuk membuka tautan https://cssgridgarden.com yah !
 
 Masuk ke bagian terakhir dalam pembelajaran hari ini, cukup panjang yah !
 
@@ -840,8 +745,7 @@ Tenang ini hanyalah perkenalan saja loh #eh 😂
 Mari kita berkenalan dengan CSS Preprocessors yang bernama SASS.
 
 ### CSS Preprocessors
-Sebenarnya dalam CSS ini sendiri, kita tidak bisa memasukkan variable variable  
-layaknya javascript dan bahasa pemrograman lainnya.
+Sebenarnya dalam CSS ini sendiri, kita tidak bisa memasukkan variable variable layaknya javascript dan bahasa pemrograman lainnya.
 
 Namun bagaimanakah bila kita membutuhkan hal tersebut dan fitur fitur lainnya?
 
@@ -857,11 +761,9 @@ Cara menggunakan SASS adalah dengan memasangnya secara global yaitu dengan
 npm install -g sass
 ```
 
-Package sass ini bisa membaca 2 tipe file: scss dan sass, perbedannya hanyalah  
-pada semicolon dan bracket saja.
+Package sass ini bisa membaca 2 tipe file: scss dan sass, perbedannya hanyalah pada semicolon dan bracket saja.
 
-Untuk menyamakan dengan css, yang akan digunakan pada pembelajaran ini adalah  
-yang `scss` yah !
+Untuk menyamakan dengan css, yang akan digunakan pada pembelajaran ini adalah yang `scss` yah !
 
 Mari kita coba membuatnya setelah memasang di sass di atas.
 
@@ -878,14 +780,10 @@ body {
 ```
 1. Buka sebuah terminal
 1. Jalankan perintah `npx sass --watch custom.scss custom.css`.  
-   Perintah ini meminta sass untuk melakukan observasi perubahan konten pada  
-   file `custom.scss` dan membuatkan outputnya menjadi file `custom.css`.  
-   Setiap kali ada perubahan, akan selalu dikompilasi menjadi file   
-   `custom.css` (dengan asumsi file tidak error)
+   Perintah ini meminta sass untuk melakukan observasi perubahan konten pada  file `custom.scss` dan membuatkan outputnya menjadi file `custom.css`.  Setiap kali ada perubahan, akan selalu dikompilasi menjadi file `custom.css` (dengan asumsi file tidak error)
 1. Bukalah file `custom.css` yang terbentuk dan lihat hasilnya !
-1. Selanjutnya mis. kita akan menggunakan scss ini untuk memudahkan penulisan  
-   pada file `navbar.css` yang dibuat sebelumnya.  
-   (Permisalan yah, tidak dibuat persis)
+1. Selanjutnya mis. kita akan menggunakan scss ini untuk memudahkan penulisan 
+    pada file `navbar.css` yang dibuat sebelumnya. (Permisalan yah, tidak dibuat persis)
 ```scss
 nav {
   .links {
@@ -898,7 +796,7 @@ nav {
 }
 ```
 1. Kemudian sesuai dengan kata kata `css on steroid`, scss ini juga mendukung  
-   looping
+    looping
 ```scss
 @for $i from 1 through 12 {
   col-#{$i} {
@@ -909,8 +807,8 @@ nav {
 }
 ```
 
-Sekian dan sedikit ini saja untuk introduction terhadap sass ini, selanjutnya  
-bisa dicoba untuk eksplorasi sendiri yah dan selamat belajar !
+Sekian dan sedikit ini saja untuk introduction terhadap sass ini, selanjutnya bisa dicoba untuk eksplorasi sendiri yah dan selamat belajar !
+
 ### Additional
 #### CSS Specificity
 - https://web.dev/learn/css/specificity/
