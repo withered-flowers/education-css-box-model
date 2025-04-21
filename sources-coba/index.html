@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar CSS Pake Tailwind</title>
+  <!-- Import TailwindCSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-w-full">
+  <!-- Perkenalan Tailwind CSS -->
+  <!-- <p class="p-8 text-cyan-100 md:text-red-400 text-3xl font-semibold">Hello World</p> -->
+
+  <!-- <div class="hidden md:flex flex-row min-h-screen min-w-screen">
+    <div class="p-4 bg-cyan-50 min-w-1/6">Navigasi (Kiri)</div>
+    <div class="p-4 bg-zinc-100 grow">Content (Tengah)</div>
+    <div class="p-4 bg-emerald-100">Minimap (Kanan)</div>
+  </div>
+
+  <div class="md:hidden flex flex-col min-h-screen">
+    
+    <nav class="p-4 bg-emerald-50 flex flex-row w-screen gap-4 justify-between">
+      <div>Brand</div>
+      <div>Link (Halaman)</div>
+      <div>Link (Github)</div>
+    </nav>
+    
+    <div class="p-4 bg-zinc-100 grow">
+      <p>Content Starts Here</p>
+    </div>
+  </div> -->
+
+  <nav class="p-4 bg-emerald-50 grid grid-cols-3">
+    <div class="text-left">Brand</div>
+    <div class="text-center">Link (Halaman)</div>
+    <div class="text-right">Link (Github)</div>
+  </nav>
+
+  <button type="button"
+    class="bg-zinc-100 hover:bg-zinc-400 hover:text-white px-4 py-2 rounded-full transition-colors duration-300">Tekan
+    Aku</button>
+</body>
+
+</html>
